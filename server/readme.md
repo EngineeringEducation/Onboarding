@@ -1,9 +1,9 @@
 # Server-side Engineering
 
-Javascript:
-Eloquent Javascript:
-Ch 2, 3, 4 OR
+First, make sure you're very solid on Javascript. A great run-through to get you back in the game after iOS is to do this very first workshop:  
+```shell
 npm install -g javascripting
+```
 Weekend:
 5, 6, 7(optional), 8, 10
 npm install -g planetproto
