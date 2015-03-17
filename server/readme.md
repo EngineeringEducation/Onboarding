@@ -17,5 +17,5 @@ npm install -g lololodash
 ```
 
 Now it's time to start using express.js. We'll be working on these exercises:  
-3- [Mailing List](mailing_list.md) - Should take you 3 to 4 days to complete
+3- [Mailing List](mailing_list.md) - Should take you 3 to 4 days to complete  
 4- [Persistence Layer (continuation of another project)](persistence_layer.md) - Should take 2 days to complete
