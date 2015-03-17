@@ -39,23 +39,18 @@ Read [this](http://eloquentjavascript.net/12_browser.html) to find out why brows
 9- [Events](http://eloquentjavascript.net/14_event.html)  
 
 10- [DOM Exercise](/dom_exercise.md)
+11- [Forms and Form Fields](http://eloquentjavascript.net/18_forms.html)
 
 ### jQuery
 The jQuery docs are [here](http://api.jquery.com/). Take a look at them, and then read the resources. jQuery helps us do 3 things - Find DOM Nodes, Create DOM Nodes, and Change DOM Nodes. Below are the resources you'll need for all of them.  
   
 Go back to the DOM exercise, adapt it to use jQuery.  
-11- [DOM Exercise](/dom_exercise.md)  
+12- [DOM Exercise](/dom_exercise.md)  
 
 
 ### AJAX
 [HTTP](http://eloquentjavascript.net/17_http.html)
 AJAX in jQuery - [GET](http://api.jquery.com/jQuery.get/), [POST](http://api.jquery.com/jQuery.post/)
 
-12- [DOM Exercise](/dom_exercise.md)
+13- [DOM Exercise](/dom_exercise.md)
 
-### Advanced JS
-
-
-### JS MVC
-
-### Backbone || Angular
