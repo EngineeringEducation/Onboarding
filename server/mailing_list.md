@@ -74,7 +74,7 @@ That’s a lot! By now, you know how to approach giant problems like this: **ste
 
 Keep open the Express API documentation and the Node.js documentation.
 
-Another great resource is Eloquent Javascript's Express.js tutorial and this API tutorial
+Another great resource is  [this API tutorial](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
 
 ## Step 0: The Simplest Possible Thing
 
