@@ -6,7 +6,7 @@ This repository should contain everything you need to follow the self-guided cur
   
 Start with Front-end Web. Next, iOS, then Server-side  
 
-Front-end Web  
+[Front-end Web](/front-end)  
 - Team Treehouse
 - Project 1
   
