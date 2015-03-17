@@ -4,23 +4,18 @@ First, make sure you're very solid on Javascript. A great run-through to get you
 ```shell
 npm install -g javascripting
 ```
-Weekend:
-5, 6, 7(optional), 8, 10
-npm install -g planetproto
 
-Monday:
+Begin with LearnYouNode - the cannonical open-source workshop by the node.js community. It has a series of exercises that incrementally show you more and more of node. It should take you about 12 hours to complete, but those less comfortable with JS might take up to 16 hours.
+```shell
 npm install -g learnyounode
-Talk about POSIX - why does it say “The application programming interface (API)” instead of “an api” - this is because it’s the original API - the interface that operating systems defined for applications to interact with them. The first API.
+```
 
-
+Useful tutorials are listed below- they aren't required, but might help you in understanding some of the deeper node concepts.
+```shell
 npm install -g how-to-npm
-
 npm install -g lololodash
+```
 
-unsure if we need these ones
-npm install -g stream-adventure
-npm install -g async-you
-
-
-What we’ll actually use
-npm install -g expressworks
+Now it's time to start using express.js. We'll be working on these exercises:  
+[Mailing List](mailing_list.md) - Should take you 3 to 4 days to complete
+[Persistence Layer (continuation of another project)](persistence_layer.md) - Should take 2 days to complete
