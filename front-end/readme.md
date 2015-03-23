@@ -47,9 +47,12 @@ Read [this](http://eloquentjavascript.net/12_browser.html) to find out why brows
 
 ### jQuery
 The jQuery docs are [here](http://api.jquery.com/). Take a look at them, and then read the resources. jQuery helps us do 3 things - Find DOM Nodes, Create DOM Nodes, and Change DOM Nodes. Below are the resources you'll need for all of them.  
-  
+#### Resources:
+[Thinkful's Intro to jQuery](http://www.thinkful.com/learn/intro-to-jquery)
+
 Go back to the DOM exercise, adapt it to use jQuery.  
 12- [DOM Exercise](/dom_exercise.md)  
+
 
 
 ### AJAX

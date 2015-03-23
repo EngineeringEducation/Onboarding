@@ -42,7 +42,7 @@ We’re going to be building a site that functions like many startups you've see
 
 Seems simple, right?
 
-Node.js and the things you can make with it should empower you to build the web that exists between all of the connected devices you use every day. Node.js shouldn’t just be thought of as something for building webservers. It’s to connect programs together, be that over the network, or locally on your computer. It’s Javascript, with an interface to the full power of your operating system. That means it can read files, do computation, and connect with other resources across the internet. 
+Node.js and the things you can make with it empowers you to build the web that exists between all of the connected devices you use every day. Node.js shouldn’t just be thought of as something for building webservers. It’s to connect programs together, be that over the network, or locally on your computer. It’s Javascript, with an interface to the full power of your operating system. That means it can read files, do computation, and connect with other resources across the internet. 
 
 **What we’ll need to know how to do to successfully complete this project:**
 
@@ -72,27 +72,27 @@ That’s a lot! By now, you know how to approach giant problems like this: **ste
 
 ## General Resources:
 
-Keep open the Express API documentation and the Node.js documentation.
+**Keep open the Express API documentation and the Node.js documentation.**
 
-Another great resource is  [this API tutorial](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
+Another great resource is [this API tutorial](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
 
 ## Step 0: The Simplest Possible Thing
 
 First, let’s just create a webserver that returns Hello World! Let’s go through some of the basic "app hygiene" practices that will help us keep organized.
 
-Open terminal, and create yourself a folder for this project with mkdir. **Stay out of finder.app for this entire exercise**, and out of it forever if you can help it. Real programmers don’t use finder.app.
+Open terminal, and create yourself a folder for this project with `mkdir`. **Stay out of finder.app for this entire exercise**, and out of it forever if you can help it. Real programmers don’t use finder.app.
 
-Next, within that folder, git init
+Next, within that folder, `git init`
 
-Now, npm init
+Now, `npm init`
 
-npm will ask you several questions, press enter if you don’t know what to fill in. You can always come back later and look at your package.json file and change things. Make sure to give it a **name** (mailingList or whatever strikes your fancy); **accept the default entry point **(which is index.js), and add an author and description if you feel like it. 
+npm will ask you several questions, press enter if you don’t know what to fill in. You can always come back later and look at your package.json file and change things. Make sure to give it a **name** (`mailingList` or whatever strikes your fancy); **accept the default entry point **(which is `index.js`), and add an author and description if you feel like it. 
 
 Now then, we’ll be using an npm package called ‘Express’, which helps us manage a lot of common web tasks and also helps us organize our program. We need to install it however, so let’s do that now with npm install express --save
 
 The --save switch writes that we need that package in our package.json file, so that anyone who wants to run our code only has to type npm install and it will pull down all of our packages.
 
-Now, create index.js by typing touch index.js in your terminal. This creates a blank file. Now open up sublime text (try subl .) and add your folder to your project using the project menu.
+Now, create index.js by typing touch index.js in your terminal. This creates a blank file. Open up sublime text (try using `subl .`) and add your folder to your project using the project menu.
 
 **Time to finally write some code!**
 
@@ -104,14 +104,15 @@ Let’s go over the plan:
 
 * With "Hello World"
 
-Open up your file, and require the express.js module, using var express = require("express");
+Open up your file, and require the express.js module, using `var express = require("express")`;
 
-[Now create a new instance of an express server](http://expressjs.com/api.html#express), by typing var app = express();
+[Now create a new instance of an express server](http://expressjs.com/api.html#express), by typing `var app = express();`
 
 This will return you an app that’s capable of doing a lot of stuff! For now, we just want it to return hello world, so let’s look at how we can accomplish that.
 
-[app.get](http://expressjs.com/api.html#res.get) is a handy method for listening to get requests. It listens for any requests that come in, whose path matches that of the first argument. Then, it runs the callback function supplied as the second argument. Way easier than raw node.js!
+**[app.get](http://expressjs.com/api.html#res.get)** is a handy method for listening to get requests. It listens for any requests that come in, whose path matches that of the first argument. Then, it runs the callback function supplied as the second argument. Way easier than raw node.js!
 
+```javascript
 app.get("/" function(request, response) {
 
 // We get access here to the request, so we can find out more information about what the requester wants.
@@ -121,28 +122,29 @@ app.get("/" function(request, response) {
 [response.send](http://expressjs.com/api.html#res.send)("<h1>Hello World!</h1>");
 
  });
+```
 
 Now, our app will accomplish what we want, but we need to actually "hook it up" to incoming requests. The way we do this is by asking it to listen to a specific port.
 
 Often, we don’t know the port we’re going to be listening to in advance, because it’s set by something external. In the [12-factor-app model](http://12factor.net/), we want to [store that kind of information in the environment](http://12factor.net/config), not hard-coded in our application, since that information will change from server to server, but we don’t want to have to update our code to make it run somewhere else.
 
-So, let’s get that port from the environment by using var port = process.env["PORT"];
+So, let’s get that port from the environment by using `var port = process.env["PORT"];`
 
-And then let’s listen to whatever port that may be by using app.listen(port);
+And then let’s listen to whatever port that may be by using `app.listen(port);`
 
 Done! Now let’s run it, and set that environment variable in the same line. Use:
-
+```
 PORT=3000 node index.js
-
+```
 … in your terminal.
 
-Check it out at localhost:3000
+Check it out at `localhost:3000`
 
 ## Step 1: Serve HTML
 
 Alright, so now that we can get words on a webpage, let’s start by serving some HTML! 
 
-Obviously, writing a bunch of inline HTML in response.send() would just suck and be completely unsustainable. So let’s start by serving files.
+Obviously, writing a bunch of inline HTML in `response.send()` would just suck and be completely unsustainable. So let’s start by serving files.
 
 **The plan:**
 
@@ -162,17 +164,17 @@ Include this line app.use(express.static(__dirname + '/views'));
 
 This just tells express to look in the request for the path, and then look for a file that matches the path being requested. 
 
-Try running your app again PORT=3000 node index.js and then visit localhost:3000 in your browser. You should see the contents of your file!
+Try running your app again `PORT=3000 node index.js` and then visit `localhost:3000` in your browser. You should see the contents of your file!
 
-Notice that we didn’t specify a path, yet it rendered index.html. Webservers since the beginning of time have looked at index.html if no path was specified, and we like to stick to convention, so that’s what happens. 
+Notice that we didn’t specify a path, yet it rendered `index.html`. Webservers since the beginning of time have looked at `index.html` if no path was specified, and we like to stick to convention, so that’s what happens. 
 
-Try visiting localhost:3000/index.html
+Try visiting `localhost:3000/index.html`
 
-Now hit localhost:3000/whatever.html
+Now hit `localhost:3000/whatever.html`
 
-Notice it returns a nicely formatted error (instead of crashing) that says Cannot GET /whatever.html. 
+Notice it returns a nicely formatted error (instead of crashing) that says `Cannot GET /whatever.html`. 
 
-Create a file called whatever.html, throw something in it. Hit the server again at that same address, and notice your file is now being served! 
+Create a file called `whatever.html`, throw something in it. Hit the server again at that same address, and notice your file is now being served! 
 
 ## Step 2: Serve Other Files
 
@@ -187,24 +189,24 @@ Now, these files are just the ugliest things we’ve ever seen. We don’t typic
 * Include it on the HTML we're serving
 
 Add this line, and create the corresponding folder:
-
+```javascript
 app.use(express.static(__dirname + '/static'));
-
-Now, in your /static folder, create /images /stylesheets /javascripts. This is where you'll put the files you write that are static. Next, we'll install other libraries and packages using Bower.
+```
+Now, in your `/static` folder, create `/images` `/stylesheets` `/javascripts`. This is where you'll put the files you write that are static. Next, we'll install other libraries and packages using Bower.
 
 ## 2a: Using Bower to install dependencies
 
-The easiest way to install things like bootstrap and jQuery is to **use bower****_. _**To use Bower, make sure it is installed by typing npm install bower -g. Next, in your project directory, create a file called .bowerrc (note that it starts with a dot). Now, in that file, add some json:
-
+The easiest way to install things like bootstrap and jQuery is to **use bower**. To use Bower, make sure it is installed by typing `npm install bower -g`. Next, in your project directory, create a file called `.bowerrc` (note that it starts with a dot). Now, in that file, add some json:
+```javascript
 {
 
 	"directory": "./static"
 
 }
-
+```
 Which tells bower where to save the things you want to install. Much like npm is a package manager for node.js and server-side scripts, bower is a package manager for front-end packages, like bootstrap, jquery, and modernizr. 
 
-Once you have your .bowerrc file configured and saved, go ahead and type bower install bootstrap.
+Once you have your `.bowerrc` file configured and saved, go ahead and type bower install bootstrap.
 
 You can now look in your static directory, where you’ll see Bootstrap and jQuery are now installed! 
 
@@ -212,10 +214,10 @@ You can now look in your static directory, where you’ll see Bootstrap and jQue
 
 Alright, so now we literally have everything we need to host a static webserver. It’s not the fastest, most optimized server ever, but it is the simplest, fewest lines of code we need to get a site up and running. 
 
-Head over to the [bootstrap template](http://getbootstrap.com/getting-started/#template), grab it, and throw it in your index.html file. Now, we need to fix the references in the file so that they point to where bootstrap actually lives on our server. 
-
+Head over to the [bootstrap template](http://getbootstrap.com/getting-started/#template), grab it, and throw it in your `index.html` file. Now, we need to fix the references in the file so that they point to where bootstrap actually lives on our server. 
+```html
 <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
-
+```
 is what your CSS file needs to look like, see if you can fix the JS reference yourself.
 
 Now it’s time to make this page useful. 
@@ -231,31 +233,31 @@ Once you’ve done that, it’s much easier to look at the request body! But, we
 HTML forms are our way of telling the browser how to format data so that we can read it later. 
 
 Put a form on your page that looks like this:
-
+```html
 <form action="/submit" method="POST">
 
 Enter your email address : <input name="email" type="email" />
 
 </form>
-
+```
 You should now have a really basic form on your page. You should be able to enter your email address, and press [enter] to submit. You can also throw a submit button on there if you want to, I guess.
 
 Ok, now submitting should get you something that says "Cannot POST /submit". Let’s fix that error!
 
-First, include body-parser the same way we included the express app, var bodyParser = require('body-parser');
+First, include body-parser the same way we included the express app, `var bodyParser = require('body-parser');`
 
 Now let’s configure this middleware the same way we configured our static middleware:
-
+```javascript
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
-
+```
 This will help us parse all of that messy data that comes in as a post body as some nice json saved on the request object. This is **middleware** that’s been pre-written for us. In order to understand middleware, let’s write some ourselves!
 
 ## Step 3a: Log it out for great debugging
 
 Put this code as the first call to app.use(), above the static middleware routing and above the request body parsing. This way, it will run before anything else, but will allow other requests to be parsed.
-
+```javascript
 //logging middleware
 
 app.use(function(req,res,next) {
@@ -265,13 +267,13 @@ app.use(function(req,res,next) {
 	next();
 
 });
-
-This puts in the console every path that is requested, and then it tells express to go on running anything else that would respond on that path. Run your server, and hit localhost:3000/index.html and watch the requests come in. You’ll also see all of the static requests, so you should see the calls for bootstrap’s CSS and it’s JS. Notably missing is the request for jQuery, since we didn’t actually change the jQuery link, it hits a server that isn’t ours. 
+```
+This puts in the console every path that is requested, and then it tells express to go on running anything else that would respond on that path. Run your server, and hit `localhost:3000/index.html` and watch the requests come in. You’ll also see all of the static requests, so you should see the calls for bootstrap’s CSS and it’s JS. Notably missing is the request for jQuery, since we didn’t actually change the jQuery link, it hits a server that isn’t ours. 
 
 ## Step 3b: Respond to the POST
 
-Use the app.post() to see what we get in the request body on the path we’ve included in our form:
-
+Use the `app.post()` to see what we get in the request body on the path we’ve included in our form:
+```javascript
 //Respond to POST requests
 
 app.post("/submit", function(request,response,next) {
@@ -279,16 +281,16 @@ app.post("/submit", function(request,response,next) {
 	console.log(request.body);
 
 });
-
+```
 This won’t do anything other than log out what we’re getting from the request, but let’s test it. 
 
 Head over to your browser and enter an email and hit [enter] or submit if you put yourself a fancy button in there. Then. look at your console, you should see something like:
-
+```javascript
 { email: 'liz@tradecrafted.com' }
+```
+This is an actual object, not a string, so we can actually access it via `request.body.email` or `request.body["email"]`. 
 
-This is an actual object, not a string, so we can actually access it via request.body.email or request.body["email"]. 
-
-Let’s actually respond to the post with response.end- echo back the email and thank the user for trusting you with that valuable piece of data. 
+Let’s actually respond to the post with `response.end`- echo back the email and thank the user for trusting you with that valuable piece of data. 
 
 ## Step 3c: Some creativity
 
@@ -310,26 +312,26 @@ In a new terminal window or tab, type psql -h localhost
 
 Now we’ve got a connection to our local postgresql server. We’re not actually going to create things in psql right now, we’re just going to do a little touring of what is there.[ A cheat sheet of psql commands is here.](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
 
-It’s common practice to have a "database setup" or "seed" file. It’s a file that contains all of the SQL commands needed to create a database and populate it with the required tables. It also is usually pretty readable, so we can use it as a reference to see what our tables look like. 
+It’s common practice to have a "database setup" or "schema" file. It’s a file that contains all of the SQL commands needed to create a database and populate it with the required tables. It also is usually pretty readable, so we can use it as a reference to see what our tables look like. 
 
-touch schema.sql and then open it in Sublime Text. 
+touch `schema.sql` and then open it in Sublime Text. 
 
 Here we’ll put the SQL statements we need to create our database, and create all of the tables we need to run our app. 
 
 **Creating a Database**
 
-To create a database, run the following statement: CREATE DATABASE databasename; 
+To create a database, run the following statement: `CREATE DATABASE databasename;` 
 
-Once you do this, your connection string will look (locally) like postgres://localhost:5432/databasename
+Once you do this, your connection string will look (locally) like `postgres://localhost:5432/databasename`.
 
-This is something you’ll want to store in your environment as DATABASE_URL, much like our PORT variable. In production, this will come from our host. 
+This is something you’ll want to store in your environment as `DATABASE_URL`, much like our `PORT` variable. In production, this will come from our host. 
 
 **Creating Tables**
 
-To create a table to save our emails in, we’ll need to use the CREATE TABLE statement. We need to store several pieces of information. 
+To create a table to save our emails in, we’ll need to use the `CREATE TABLE` statement. We need to store several pieces of information. 
 
 Here’s an example from our messagehub app:
-
+```sql
 CREATE TABLE messages (
 
   type_token varchar(100) NOT NULL,
@@ -343,7 +345,7 @@ CREATE TABLE messages (
   message_timestamp timestamptz DEFAULT localtimestamp NOT NULL
 
 );
-
+```
 You’ll need to create some tables that keep track of:
 
 * Email addresses
@@ -354,7 +356,7 @@ You’ll need to create some tables that keep track of:
 
 * What emails have been sent
 
-Once you’ve written the create table statements, you can run the file you’ve created by typing psql databasename -f schema.sql
+Once you’ve written the create table statements, you can run the file you’ve created by typing `psql databasename -f schema.sql`
 
 ## Step 4b: Connecting in your app
 
