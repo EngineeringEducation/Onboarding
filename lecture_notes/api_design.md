@@ -77,9 +77,9 @@
 		* [Uber API Docs](https://developer.uber.com/v1/endpoints/)
 
 	* REST API Resources
-		* [http://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling](Modeling Resources)
-		* [https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4](Express tutorial to build one yourself)
-		* [http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api](Best Practices)
+		* [Modeling Resources](http://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling)
+		* [Express tutorial to build one yourself](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
+		* [Best Practices](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 
 ## Building Module APIs
 
