@@ -5,14 +5,15 @@
 * It means Application Programming Interface
 * People use it, and it's an interface, so user interface design is really what we're doing
 * When designing APIs, they should be:
+	* Designed for Humans To Use
 	* Flexible
 	* Based on Use Cases
 	* Have Good Docs
 	* Hide as much implementation detail from the user as possible
 
 ## Examples:
-* (REST APIs)[http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm] - from (Roy Fielding's dissertation)[http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm]
-* (The Document Object)[https://developer.mozilla.org/en-US/docs/Web/API/document]
+* [REST APIs](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) - from [Roy Fielding's dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
+* [The Document Object](https://developer.mozilla.org/en-US/docs/Web/API/document)
 * [Some iOS examples]
 
 
@@ -68,11 +69,19 @@
 			* Does the client have to request those permissions from the user?
 		* Show an example request
 		* Provide an example response to that request
-	* Follow best-practices: http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+	* [Follow best-practices](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 
 	* REST API Examples
-		* https://instagram.com/developer/
-		* https://developers.google.com/drive/v2/reference/
-		* https://developer.uber.com/v1/endpoints/
+		* [Instagram API Docs](https://instagram.com/developer/)
+		* [Google Drive API Docs](https://developers.google.com/drive/v2/reference/)
+		* [Uber API Docs](https://developer.uber.com/v1/endpoints/)
+
+	* REST API Resources
+		* [http://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling](Modeling Resources)
+		* [https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4](Express tutorial to build one yourself)
+		* [http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api](Best Practices)
 
 ## Building Module APIs
+
+* http://mattgemmell.com/api-design/
+* http://lcsd05.cs.tamu.edu/slides/keynote.pdf
