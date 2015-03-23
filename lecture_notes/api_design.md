@@ -75,6 +75,7 @@
 		* [Instagram API Docs](https://instagram.com/developer/)
 		* [Google Drive API Docs](https://developers.google.com/drive/v2/reference/)
 		* [Uber API Docs](https://developer.uber.com/v1/endpoints/)
+		* [All of the rest of them](http://www.publicapis.com/)
 
 	* REST API Resources
 		* [Modeling Resources](http://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling)
@@ -85,3 +86,4 @@
 
 * http://mattgemmell.com/api-design/
 * http://lcsd05.cs.tamu.edu/slides/keynote.pdf
+* http://devdocs.io/
