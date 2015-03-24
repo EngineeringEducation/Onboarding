@@ -35,6 +35,7 @@ You should be able to complete this project if you understand the above resource
 ```shell
 $ npm install -g planetproto
 $ planetproto
+```
 
 ### DOM Manipulation
 Read [this](http://eloquentjavascript.net/12_browser.html) to find out why browsers are the absolute worst ever. DOM manipulation helps us to have dynamic pages, not just static HTML. 
