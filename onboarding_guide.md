@@ -42,8 +42,27 @@ Add psql to your path by opening ~/.bashrc and adding this line (anywhere):
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 ```
 
+Add subl to your path by [following this guide](http://www.sublimetext.com/docs/2/osx_command_line.html)  
+
+Setup SSH for Github by [following this guide](https://help.github.com/articles/generating-ssh-keys/)  
+
 --
 ## First Tasks
+Clone this repository to your computer.  
+```shell
+git clone _______
+```
+Find the repository link to the right hand side of the page. Use the SSH link instead of the HTTPS link to verify you set up SSH correctly.
 
+Next, locally (on your computer), create a branch with your name. ([Stuck?](https://try.github.io/levels/1/challenges/1))  
+
+Edit this page (at the bottom) to include your name, then push your branch to this repository.  
+[Then file a pull request](https://help.github.com/articles/creating-a-pull-request/).  
 
 ## Next Steps
+Start going through the materials provided in this repository. Typically we start at [front-end](../front-end) but might start with [iOS](../ios) in the future.
+
+
+## People who have completed this guide:
+Liz
+Janardan

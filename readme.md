@@ -1,6 +1,6 @@
 # Welcome!  
   
-If this is your first time looking at this document, read the [onboarding guide](#).  
+If this is your first time looking at this document, read the [onboarding guide](onboarding_guide.md).  
 
 This repository should contain everything you need to follow the self-guided curriculum for Tradecraft Engineering. Self-guided curriculum is going to consist of external resources and internal resources.  
   
