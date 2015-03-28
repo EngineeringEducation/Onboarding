@@ -3,9 +3,7 @@
 So we’re building a mailing list. This document should help you:
 
 * Know what you need to know
-
 * Make a plan
-
 * Know what to do when you get stuck
 
 ## What is this project?
@@ -15,29 +13,19 @@ We’re going to be building a site that functions like many startups you've see
 **Main Requirements:**
 
 * Collect users’ email addresses and a timestamp
-
 * Saves users' email addresses in a database
-
 * Sends an email to users when they sign up
-
 * Sends an email to users a day after they sign up
-
 * Sends an email to users a week after they sign up
 
 **Stretch goals:**
 
 * Admin user can log in with google
-
 * View all email addresses
-
 * Compose a message
-
 * Save that message to disk for further use
-
 * Send a message to all users right now
-
 * Send a message to all users some amount of time after they sign up
-
 * View the schedule of emails
 
 Seems simple, right?
