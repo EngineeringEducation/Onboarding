@@ -1,5 +1,4 @@
-# Onboarding
-## for Tradecraft Engineering!
+# Onboarding for Tradecraft Engineering
 Welcome!  
 This guide should help you get started with the engineering track. Follow the tasks below:  
 
@@ -60,7 +59,7 @@ Edit this page (at the bottom) to include your name and a link to your github pr
 [Then file a pull request](https://help.github.com/articles/creating-a-pull-request/).  
 
 ## Next Steps
-Start going through the materials provided in this repository. Typically we start at [front-end](../front-end) but might start with [iOS](../ios) in the future.
+Start going through the materials provided in this repository. Typically we start at [front-end](/front-end) but might start with [iOS](/ios) in the future.
 
 
 ## People who have completed this guide:
