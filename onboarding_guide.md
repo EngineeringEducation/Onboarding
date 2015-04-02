@@ -65,3 +65,4 @@ Start going through the materials provided in this repository. Typically we star
 ## People who have completed this guide:
 [Liz (Track lead)](http://github.com/lizthedeveloper)  
 [Janardan (Track lead)](http://github.com/rolken)  
+[Mateo (Track lead)](http://github.com/mattphoto)  
