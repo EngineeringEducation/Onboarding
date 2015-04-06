@@ -35,25 +35,15 @@ Node.js and the things you can make with it empowers you to build the web that e
 **What we’ll need to know how to do to successfully complete this project:**
 
 * How to listen for connections coming in over the net
-
 * How to figure out what those connections are asking for
-
 * How to get data from those connections
-
 * How to send that data to another program (a database)
-
 * How to get that data back out of another program
-
 * How to read files from the hard drive
-
 * How to interact with an API, to send mail
-
 * How to use another service to asyncronously perform tasks from a queue
-
 * How to authenticate users
-
 * How to use cookies to keep users authenticated
-
 * How to use oAuth to get someone's user data from another service
 
 That’s a lot! By now, you know how to approach giant problems like this: **step by step, after you have a plan**.
@@ -74,7 +64,7 @@ Next, within that folder, `git init`
 
 Now, `npm init`
 
-npm will ask you several questions, press enter if you don’t know what to fill in. You can always come back later and look at your package.json file and change things. Make sure to give it a **name** (`mailingList` or whatever strikes your fancy); **accept the default entry point **(which is `index.js`), and add an author and description if you feel like it. 
+npm will ask you several questions, press enter if you don’t know what to fill in. You can always come back later and look at your package.json file and change things. Make sure to give it a **name** (`mailingList` or whatever strikes your fancy); **accept the default entry point** (which is `index.js`), and add an author and description if you feel like it. 
 
 Now then, we’ll be using an npm package called ‘Express’, which helps us manage a lot of common web tasks and also helps us organize our program. We need to install it however, so let’s do that now with npm install express --save
 
@@ -87,9 +77,7 @@ Now, create index.js by typing touch index.js in your terminal. This creates a b
 Let’s go over the plan: 
 
 * Create a webserver
-
 * That responds to GET requests
-
 * With "Hello World"
 
 Open up your file, and require the express.js module, using `var express = require("express")`;
@@ -100,6 +88,8 @@ This will return you an app that’s capable of doing a lot of stuff! For now, w
 
 **[app.get](http://expressjs.com/api.html#res.get)** is a handy method for listening to get requests. It listens for any requests that come in, whose path matches that of the first argument. Then, it runs the callback function supplied as the second argument. Way easier than raw node.js!
 
+**[response.send (or res.send)](http://expressjs.com/api.html#res.send)** is for sending out the full text of the body. Similar to response.write in raw node, this also allows you to send json objects without doing any preprocessing or stringifying.
+
 ```javascript
 app.get("/" function(request, response) {
 
@@ -107,7 +97,7 @@ app.get("/" function(request, response) {
 
 // We also get access to the response object, which is the object that allows us to send a string (or other things) back to the requester.
 
-[response.send](http://expressjs.com/api.html#res.send)("<h1>Hello World!</h1>");
+[response.send]("<h1>Hello World!</h1>");
 
  });
 ```
@@ -121,7 +111,7 @@ So, let’s get that port from the environment by using `var port = process.env[
 And then let’s listen to whatever port that may be by using `app.listen(port);`
 
 Done! Now let’s run it, and set that environment variable in the same line. Use:
-```
+```shell
 PORT=3000 node index.js
 ```
 … in your terminal.
@@ -137,9 +127,7 @@ Obviously, writing a bunch of inline HTML in `response.send()` would just suck a
 **The plan:**
 
 * With our existing server
-
 * Serve HTML files from a directory
-
 * Based on the path of the request
 
 Make a new directory (with mkdir in your terminal!) and call it views. Now, cd into that folder and touch index.html. You should see this pop up in sublime text but if not, refresh folders from the project menu.
@@ -148,7 +136,7 @@ Let’s put some text into this file, it doesn’t matter what right now, so jus
 
 Express has some [very simple middleware functions](http://expressjs.com/guide/using-middleware.html), one of which lets us just use static files.
 
-Include this line app.use(express.static(__dirname + '/views'));
+Include this line `app.use(express.static(__dirname + '/views'));`
 
 This just tells express to look in the request for the path, and then look for a file that matches the path being requested. 
 
@@ -166,14 +154,12 @@ Create a file called `whatever.html`, throw something in it. Hit the server agai
 
 ## Step 2: Serve Other Files
 
-Now, these files are just the ugliest things we’ve ever seen. We don’t typically just serve plain-jane HTML with no CSS, but we don’t want to clutter up our views directory with a bunch of CSS and JS files, especially since the server is made out of JS files- it would be too hard to tell what was what. Let’s create a "static" directory, for static assets. When we use the term static, we mean, we aren’t going to manipulate it with the server before we send it out. We’re doing the same thing with our HTML, but as you can probably guess, that won’t always be the case.
+Now, these files are just the ugliest things we’ve ever seen. We don’t typically just serve plain-jane HTML with no CSS, but we don’t want to clutter up our views directory with a bunch of CSS and JS files, especially since the server is made out of JS files- it would be too hard to tell what was what. Let’s create a "static" directory, for static assets. When we use the term static, we mean we aren’t going to manipulate it with the server before we send it out. We’re doing the same thing with our HTML, but as you can probably guess, that won’t always be the case.
 
 **The Plan:**
 
 * Serve files that don't change from request to request from the static directory
-
 * Install bootstrap
-
 * Include it on the HTML we're serving
 
 Add this line, and create the corresponding folder:
@@ -214,7 +200,7 @@ Now it’s time to make this page useful.
 
 We knew going into this that we’d need to get some data. Unfortunately, we can’t just serve static files any longer, we need to be able to process information from a request, and then do something with it. For this, we’ll need to read information from a POST request, and for that, we’ll need middleware. 
 
-Let’s install the npm package, body-parser. Don’t forget the --save switch, so that it writes it to our package.json file.
+Let’s install the npm package, body-parser. Don’t forget the `--save` switch, so that it writes it to our `package.json` file.
 
 Once you’ve done that, it’s much easier to look at the request body! But, we haven’t gotten a request body to look at before, and we won’t without an HTML form. 
 
@@ -244,7 +230,7 @@ This will help us parse all of that messy data that comes in as a post body as s
 
 ## Step 3a: Log it out for great debugging
 
-Put this code as the first call to app.use(), above the static middleware routing and above the request body parsing. This way, it will run before anything else, but will allow other requests to be parsed.
+Put this code as the first call to `app.use()`, above the static middleware routing and above the request body parsing. This way, it will run before anything else, but will allow other requests to be parsed.
 ```javascript
 //logging middleware
 
@@ -278,7 +264,7 @@ Head over to your browser and enter an email and hit [enter] or submit if you pu
 ```
 This is an actual object, not a string, so we can actually access it via `request.body.email` or `request.body["email"]`. 
 
-Let’s actually respond to the post with `response.end`- echo back the email and thank the user for trusting you with that valuable piece of data. 
+Let’s actually respond to the post with `response.end()`- echo back the email and thank the user for trusting you with that valuable piece of data. 
 
 ## Step 3c: Some creativity
 
@@ -296,13 +282,13 @@ Know SQL? Great. If not, [head over to SQLZoo](http://sqlzoo.net/wiki/Main_Page)
 
 ## Step 4a: The Database Itself
 
-In a new terminal window or tab, type psql -h localhost
+In a new terminal window or tab, type `psql -h localhost`.
 
 Now we’ve got a connection to our local postgresql server. We’re not actually going to create things in psql right now, we’re just going to do a little touring of what is there.[ A cheat sheet of psql commands is here.](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
 
 It’s common practice to have a "database setup" or "schema" file. It’s a file that contains all of the SQL commands needed to create a database and populate it with the required tables. It also is usually pretty readable, so we can use it as a reference to see what our tables look like. 
 
-touch `schema.sql` and then open it in Sublime Text. 
+`touch schema.sql`(in terminal) and then open it in Sublime Text. 
 
 Here we’ll put the SQL statements we need to create our database, and create all of the tables we need to run our app. 
 
@@ -337,11 +323,8 @@ CREATE TABLE messages (
 You’ll need to create some tables that keep track of:
 
 * Email addresses
-
 * When emails were added
-
 * What emails need to be sent
-
 * What emails have been sent
 
 Once you’ve written the create table statements, you can run the file you’ve created by typing `psql databasename -f schema.sql`
@@ -352,33 +335,36 @@ Now that you have an actual database, it’s time to connect from your app.
 
 Install (and make sure to save) an npm module called "pg". Once you’ve got that installed, require it in your app. Call the variable "pg", as it’s convention to call the variable the same or very similarly to the name of the module. 
 
-Next, get your connection string out of your environment with process.env["DATABASE_URL"] (and watch out for those smart quotes.)
+Next, get your connection string out of your environment with `process.env["DATABASE_URL"]` 
 
 **A Detour: 12-factor-apping**
 
 Let’s make our environment a bit more like production. Take a look at [http://12factor.net/config](http://12factor.net/config). This tells us we should keep our configuration in our environment.
 
-To do this, create a file called .env in your project directory.
+To do this, create a file called `.env` in your project directory. (yes, there's a . in front of the filename)
 
 In it, write:
-
+```shell
 DATABASE_URL=postgres://localhost:5432/databasename
 
 PORT=3000
+```
 
-This allows a program called Foreman to get variables from this file, and apply them to the code that runs. Foreman is how we simulate running the app on Heroku, so that we can have our local environment be the same as our production environment. Foreman came when you installed the Heroku Toolbelt. We need to create one more file, called Procfile. 
+This allows a program called **Foreman** to get variables from this file, and apply them to the code that runs. Foreman is how we simulate running the app on Heroku, so that we can have our local environment be the same as our production environment. Foreman came when you installed the Heroku Toolbelt. We need to create one more file, called `Procfile`. 
 
-In bash, type touch Procfile (yes, it’s capitalized). In it, add:
-
+In bash, type `touch Procfile` (yes, it’s capitalized). In it, add:
+```shell
 web: node app.js
+```
+From now on, we’ll launch our app by typing `foreman start`, which will apply our environment variables and then launch our code. Now your code runs _exactly_ how it will on Heroku.
 
-From now on, we’ll launch our app by typing foreman start , which will apply our environment variables and then launch our code. Now your code runs exactly how it will on Heroku.
-
-Also make sure to add .env to your .gitignore file. If you don’t have a .gitignore file, create one now.
+Also make sure to add `.env` to your `.gitignore` file. If you don’t have a `.gitignore` file, create one now.
 
 ## Back to Step 4b
 
-We want to get a database connection that we can re-use for every request so let’s tie a variable, db, to the global scope by declaring it outside of any function, var db;
+We want to get a database connection that we can re-use for every request so let’s tie a variable, db, to the global scope by declaring it outside of any function,
+```javascript
+var db;
 
 Next, we’ll connect to postgres, and then make the client available to the *global scope* so that later, it’s sitting around, waiting for us to use. 
 
@@ -387,7 +373,7 @@ pg.connect(conString, function(err, client) {
 	db = client;
 
 })
-
+```
 Now you can issue SQL commands to this client! 
 
 ## Step 4c: Get the data from the request
@@ -396,26 +382,27 @@ There are going to be a lot of instances where we need to get data from the requ
 
 **Body Parsing**
 
-This is a great time to introduce some more middleware that can help us. As you’ve noticed from learnyounode, parsing the incoming body of a request can be difficult. Let’s cheat, and use a module to help us:
-
+This is a great time to introduce some more middleware that can help us. As you’ve noticed from learnyounode, parsing the incoming body of a request can be difficult. Let’s cheat, and use a module to help us. Cheating is the best, and highly encouraged here at Tradecraft.
+```javascript
 var bodyParser = require('body-parser');
 
 Add this next to logging, but before the static file parsing. 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+```
 
 These allow your request body to be easily accessed in the following ways:
 
 **GET requests**
 
 To access parameters that are coming in via GET request (aka, in the querystring), use the following syntax:
-
+```javascript
 req.query["keyname"]
-
+```
 **POST requests**
 
-req.body is populated by the body-parser we just included in our app. Most of the time it includes keys and values, similar to the querystring. Sometimes you’ll need to pull in data that’s more complex than an HTML form’s key-value structure. If so, take a look at [the documentation for how to do that.](http://expressjs.com/4x/api.html#req.body)
+`req.body` is populated by the body-parser we just included in our app. Most of the time it includes keys and values, similar to the querystring. Sometimes you’ll need to pull in data that’s more complex than an HTML form’s key-value structure. If so, take a look at [the documentation for how to do that.](http://expressjs.com/4x/api.html#req.body)
 
 **Note: The rest of this tutorial is going to require you to look things up, and accomplish goals, instead of following walkthroughs. It has sample code links, and you should pair program if you get stuck.**
 
@@ -426,33 +413,25 @@ req.body is populated by the body-parser we just included in our app. Most of th
 * With the db we opened on server start, send it some SQL
 
     * That SQL should be an insert statement, filled in with the data from the request
-
     * An example: [https://github.com/TradecraftEngineering/messagehub/blob/master/app.js](https://github.com/TradecraftEngineering/messagehub/blob/master/app.js)
-
     * You’re looking for db.query, which takes the following arguments:
-
         * SQL query string
-
-        * Parameters to dynamically insert into the parameters ($1, $2, etc) which is an array.
-
+        * Parameters to dynamically insert into the parameters (`$1`, `$2`, etc) which is an array.
         * A function that executes after the query is finished.
-
-* Serve the "got it" response, but before the query comes back (IE, put the res.end() outside of the callback function.
+* Serve the "got it" response, but before the query comes back (IE, put the `res.end()` outside of the callback function.
 
 ## Step 4e: Give Back
 
 We want to be able to get all of the users back out of the database, and see them as a response. Define a new route that returns JSON containing all of the email addresses. Call it "/users".
 
-* Query the data the same way we did an INSERT, but this time we’re doing a SELECT statement
-
+* Query the data the same way we did an `INSERT`, but this time we’re doing a `SELECT` statement
     * example: https://github.com/TradecraftEngineering/messagehub/blob/master/app.js
-
 * Once the database returns the data, send it out as a response
 
 ## Step 5: Rendering Views and EJS
 
 EJS is a simple way to serve HTML files with content from the database. You can include variables in your HTML, and then your server can replace the variables with actual strings before it’s sent out. An example is displaying a list of users. Pretend we have a list of users that looks like this:
-
+```javascript
 var users = [
 
 	{
@@ -472,34 +451,35 @@ var users = [
 	}
 
 ];
+```
 
 And we want to embed them in our HTML, so that we can see them and their occupations. We can render a template and pass in this variable like this:
-
+```javascript
 response.render("userlist", {"users" : users});
-
+```
 Provided we have an EJS file called userlist.ejs that looks like this:
-
+```javascript
 <% for (var i=0; i < users.length; i++){ %>
 
 	<div class="user"><%=users[i].name%> spends their days as a <%=users[i].occupation%></div>
 
 <% } %>
+```
+To use the middleware, use `app.set('view engine', 'ejs');`
 
-To use the middleware, use app.set('view engine', 'ejs');
-
-This sets up response.render() to be able to read and render views that are written in EJS.
+This sets up `response.render()` to be able to read and render views that are written in EJS.
 
 Resources:
 
-[http://robdodson.me/how-to-use-ejs-in-express/](http://robdodson.me/how-to-use-ejs-in-express/)
-
-[EJS Syntax](http://www.embeddedjs.com/)
+* [http://robdodson.me/how-to-use-ejs-in-express/](http://robdodson.me/how-to-use-ejs-in-express/)
+* [EJS Syntax](http://www.embeddedjs.com/)
 
 ## Step5a: EJS
 
 * Use EJS to:
 
     * Return a page from a .ejs file. Within the file, have an HTML table that contains all of the emails you’ve collected, as well as all of the other columns on that table.
+```html
 
 <table>
 
@@ -521,11 +501,12 @@ Resources:
 
 </table>
 
+```
 ## Step5b: Rendering EJS
 
 Using the rows we got from your database call earlier, inject that data into the template:
 
-Use res.render(‘view_file_name’, { "emails" : emails } )
+Use `res.render(‘view_file_name’, { "emails" : emails } )`
 
 Which will replace the variables in your HTML with actual strings.
 
@@ -533,54 +514,42 @@ This should allow you to create a page that has dynamic data, instead of just ex
 
 # Step 6: Send Some Mail
 
-Emails in your table should have a last_emailed field. If they don’t (or something similar) add that now with [an alter table statement.](http://www.postgresqltutorial.com/postgresql-alter-table/)
+Emails in your table should have a `last_emailed` field. If they don’t (or something similar) add that now with [an alter table statement.](http://www.postgresqltutorial.com/postgresql-alter-table/)
 
 We also want to know where they are in the sequence of emails, so make sure there is a sequence column as well. 
 
-Create a script called mailer.js. We’ll be using this script, rather than our webserver, to send mail. This is because we want to keep scripts organized by actual function, and the web server should only respond to requests, rather than send mail.
+Create a script called `mailer.js`. We’ll be using this script, rather than our webserver, to send mail. This is because we want to keep scripts organized by actual function, and the web server should only respond to requests, rather than send mail.
 
 ## Step 6a: Sending the initial email
 
 [Take a look at this gist for code that sends email using mandrill.](https://gist.github.com/lizTheDeveloper/2970290ed2223a4a560b) Use the API key provided to send a test email to the emails you’ve saved in your table. **Important: Don’t send more than 5 or so emails, because the amount of emails we get for free is limited and we only have one API key. Also don’t share that gist, because it contains our API key.**
 
-* Write a query that returns all users who don't have anything in the last_email_sent field.
-
+* Write a query that returns all users who don't have anything in the `last_email_sent` field.
 * Send an email to those users using the mandrill API
-
-* Update the database each time you send an email, set the last_email_sent field to the current time, but make sure the database call doesn't block the next email being sent.
+* Update the database each time you send an email, set the `last_email_sent` field to the current time, but make sure the database call doesn't block the next email being sent.
 
 **Step 6b: Sending Many Emails**
 
 Adapt your script to send different emails, depending on where a user is in the sequence. This will require that you look at the emails you get back from the database, as well as the sequence and the timestamp. 
 
 * Write a query that will return you every user that hasn't been sent an email in the past 24 hours and is in the second step in the sequence.
-
     * Send a second email to these users
-
-    * Update the last_email_sent field
-
+    * Update the `last_email_sent` field
 * Write a query that will return every user at the third step, that hasn't been sent an email in the past week
-
     * Send a third email to these users
-
-    * Update the last_email_sent field
+    * Update the `last_email_sent` field
 
 ## Step 6c: Sending emails from files
 
-* Create a file for each email you want to send, and keep them in a mail_templates folder. 
-
-    * Call them something that contains the sequence number, like email_1.html
-
+* Create a file for each email you want to send, and keep them in a `mail_templates` folder. 
+    * Call them something that contains the sequence number, like `email_1.html`
 * Write a function that creates an email message body from a file, instead of writing it inline. 
-
-    * Make it so your function takes a sequence number as it's argument
-
+    * Make it so your function takes a `sequence` number as it's argument
     * Your function should return the message body in a callback
-
     * Send the mail in the callback, using the messageBody you just got from the function.
 
-Example:
-
+Psudeocode:
+```javascript
 function messageBodyFromSequence(sequence, callback){
 
 	// Use the sequence to look for a file with that sequence number in it
@@ -592,4 +561,4 @@ function messageBodyFromSequence(sequence, callback){
 	callback(messageBody)
 
 }
-
+```
