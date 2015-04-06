@@ -1,17 +1,26 @@
 # Front-end Web Development  
 
-## Pre-work  
+# Pre-work  
+To get started on front-end web development, go through the entirety of [this track on Treehouse](http://teamtreehouse.com/tracks/front-end-web-development).If you don't already have an account, you can get a two-week trial, which should be longer than you need to complete this pre-work.  
 
-
-## HTML/CSS
-
-## Bootstrap
+# HTML/CSS
+Your first project is to create your own personal brand website. Take a look at [Project 1 here](layout_exercise.md).  
 
 ## Landing Pages
+Landing pages are a common thing to produce for startups, as you have to make one every time you have an idea or pivot. They're a great way to test assumptions, because you can get a rough idea of who is interested by creating one.  
+
+Both of these exercises are going to be mostly only requirements, requiring you to find and use resources on your own. There'll be a little guidance, and perhaps even screenshots.  
+
+You should get started with the [iOS App Landing Page](ios_landing_page.md) exercise.  
+Next, follow that up with a [landing page for a webapp](webapp_landing_page.md) that doesn't exist (yet). We'll add analytics to the page so you can see how many people are interested in signing up for your app.  
 
 ## Layouts for apps
+Writing a layout first is the most common way to start an app. We're going to use Bootstrap to quickly lay out and modify two webapps in order to create something usable in a short amount of time. Throwing together an app front-end, even one without buttons that work, is a great way to figure out what kind of data you're going to have to gather and logistics you'll have to organize.  
 
-## Customizing after layout
+[Bootstrap-based app skeletons from screenshots](too_much_not_enough.md)  
+[Bootstrap-based app skeletons from wireframes](block_bazaar.md)  
+
+
 
 ## Javascript!
 Eloquent Javascript is going to be our first-line resource. These tutorials, readings and exercises are meant to fill in the gaps in your understanding. If you feel like it's a review, skip it and move forward until you see something you don't understand. 
