@@ -4,7 +4,7 @@
 To get started on front-end web development, go through the entirety of [this track on Treehouse](http://teamtreehouse.com/tracks/front-end-web-development).If you don't already have an account, you can get a two-week trial, which should be longer than you need to complete this pre-work.  
 
 # HTML/CSS
-Your first project is to create your own personal brand website. Take a look at [Project 1 here](layout_exercise.md).  
+Your first project is to create your own personal brand website. Take a look at [Project 1 here](layout_exercise.md). You should be able to get a decent site together in 16 hours.
 
 ## Landing Pages
 Landing pages are a common thing to produce for startups, as you have to make one every time you have an idea or pivot. They're a great way to test assumptions, because you can get a rough idea of who is interested by creating one.  
