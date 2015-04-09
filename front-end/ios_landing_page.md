@@ -1,5 +1,11 @@
 # iOS Landing Page
 
+## Phase 1
+**Skills Needed:**  
+* HTML/CSS
+* Bootstrap
+* Google Analytics (how to embed)
+
 Congratulations! You've landed a job at a brand-new startup with some people you think are really great. There's a very talented iOS engineer at the head of the company, and his co-founder is a bang-up product guy. They've been hard at work producing a product, and it's time to see if anyone would be interested in the next iteration.
 
 
