@@ -11,18 +11,20 @@ People have gardens, sometimes they produce too much of one kind of food and not
 A user story? I guess I could make one up if you really need one.  
 
 #### User Stories
-Carol has a garden, in which she grows tomatoes and, zucchini. She also has a lemon tree. She always has a million lemons and tomatoes, but she goes through zucchini super fast. She also doesn't have an herb garden.
-Mark has chickens who lay too many eggs, and too much zucchini. He wants lemons and tomatoes. Sally has an herb garden and squash. She also wants tomatoes, and eggs. 
+Carol has a garden, in which she grows tomatoes and zucchini. She also has a lemon tree. She always has a million lemons and tomatoes, but she goes through zucchini super fast. She also doesn't have an herb garden.
+Mark has chickens who lay too many eggs, and too much zucchini. He wants lemons and tomatoes. Sally has an herb garden and squash. She also wants tomatoes, and eggs.  
 
-We just want these people to be able to coordinate. Carol should be able to note she has a lot of tomatoes and lemons, Mark should be able to tell people he has eggs and zucchini, Sally should be able to offload some of her giant rosemary bushes.
+We just want these people to be able to coordinate. Carol should be able to note she has a lot of tomatoes and lemons, Mark should be able to tell people he has eggs and zucchini, Sally should be able to offload some of her giant rosemary bushes.  
 
-If Sally wants to go looking for eggs, she should be able to look for eggs, see users near her who have too many, and see what they want in return. If she has that, she can set up a trade.
+If Sally wants to go looking for eggs, she should be able to look for eggs, see users near her who have too many, and see what they want in return. If she has that, she can set up a trade.  
 
 #### What we need
-We don't have to create the whole user flow, just create an example layout for a few screens.
+We don't have to create the whole user flow, just create an example layout for a few screens.  
 
-We should have a screen that shows what users near you have a surplus of. It should list the items people have surpluses of in a grid, with a map view of the actual locations (just throw up a map of sf).
+We should have a screen that shows what users near you have a surplus of. It should list the items people have surpluses of in a grid, with a map view of the actual locations (just throw up a map of sf). I sketched this wireframe out:
 ![nearby](resources/too_much_not_enough/nearby.jpg)
 
-Show a search results page for... let's say tomatoes. It should show all the users who have a surplus of tomatoes, with a bio, a list of what they have, and a list of what they need.
+Show a search results page for... let's say tomatoes. It should show all the users who have a surplus of tomatoes, with a bio, a list of what they have, and a list of what they need. Here's another sketch:
 ![search_results](resources/too_much_not_enough/search_results.jpg)
+
+We haven't figured out the trade screen, so just start with these. Should be enough for our pitch meeting.
