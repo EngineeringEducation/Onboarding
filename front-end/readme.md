@@ -1,24 +1,25 @@
 # Front-end Web Development  
 
-# Pre-work  
+## Pre-work  
 To get started on front-end web development, go through the entirety of [this track on Treehouse](http://teamtreehouse.com/tracks/front-end-web-development).If you don't already have an account, you can get a two-week trial, which should be longer than you need to complete this pre-work.  
 
-# HTML/CSS
-Your first project is to create your own personal brand website. Take a look at [Project 1 here](layout_exercise.md). You should be able to get a decent site together in 16 hours.
+## HTML/CSS
+Your first project is to create your own personal brand website. Take a look at [Project 1 here](layout_exercise.md). You should be able to get a decent site together in less than 8 hours.
 
-## Landing Pages
+### Landing Pages
 Landing pages are a common thing to produce for startups, as you have to make one every time you have an idea or pivot. They're a great way to test assumptions, because you can get a rough idea of who is interested by creating one.  
 
-Both of these exercises are going to be mostly only requirements, requiring you to find and use resources on your own. There'll be a little guidance, and perhaps even screenshots.  
+There are two scenerios here that require you to find and use resources on your own. There'll be a little guidance, but they are intended to mimic the type of experience you'd have at an early stage startup. Treat them as role-playing exercises as well as technical practice.
 
-You should get started with the [iOS App Landing Page](ios_landing_page.md) exercise.  
-Next, follow that up with a [landing page for a webapp](webapp_landing_page.md) that doesn't exist (yet). We'll add analytics to the page so you can see how many people are interested in signing up for your app.  
+* [iOS App Landing Page](ios_landing_page.md)
+* [landing page for a webapp](webapp_landing_page.md)
 
-## Layouts for apps
-Writing a layout first is the most common way to start an app. We're going to use Bootstrap to quickly lay out and modify two webapps in order to create something usable in a short amount of time. Throwing together an app front-end, even one without buttons that work, is a great way to figure out what kind of data you're going to have to gather and logistics you'll have to organize.  
+### Layouts for apps
+Writing a layout first is the most common way to start an app. We're going to use Bootstrap to quickly lay out and modify two webapps in order to create something usable in a short amount of time. Throwing together an app front-end, even one without buttons that work, is a great way to figure out what kind of data you're going to have to gather and logistics you'll have to organize. 
 
-[Bootstrap-based app skeletons from screenshots](too_much_not_enough.md)  
-[Bootstrap-based app skeletons from wireframes](block_bazaar.md)  
+These are also scenerios that will require you to own the project and define your own success.
+* [Bootstrap-based app skeletons from screenshots](too_much_not_enough.md)
+* [Bootstrap-based app skeletons from wireframes](block_bazaar.md)
 
 
 
