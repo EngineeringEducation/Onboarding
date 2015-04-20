@@ -97,7 +97,7 @@ app.get("/" function(request, response) {
 
 // We also get access to the response object, which is the object that allows us to send a string (or other things) back to the requester.
 
-[response.send]("<h1>Hello World!</h1>");
+response.send("<h1>Hello World!</h1>");
 
  });
 ```
@@ -406,7 +406,7 @@ req.query["keyname"]
 
 **Note: The rest of this tutorial is going to require you to look things up, and accomplish goals, instead of following walkthroughs. It has sample code links, and you should pair program if you get stuck.**
 
-**Step 4d: Insert the data**
+## Step 4d: Insert the data
 
 **BUT FIRST: check to make sure that the data you got was actually a real email address. Maybe you can use regular expressions ;)**
 
