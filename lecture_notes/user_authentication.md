@@ -1,7 +1,5 @@
 # User Authentication
 
-
-
 ## Cookies and Routes
 * Set a cookie from a form value
 	* `req.body["name"]`
@@ -21,19 +19,20 @@
 
 ## Credentials
 * Use something unique that only the user has
-	* that can be a password 
-	* can be something else unique, like a bearer token from oAuth
+	* That can be a password 
+	* Can be something else unique, like a bearer token from oAuth
 	* Something only the user/someone trusted on their behalf has access to
+		* [This module can help you implement user auth from oAuth providers](http://passportjs.org/guide/)
 	* A pair of things is usually sufficient, username, password
-	* like an address, and a key
+		* Like an address, and a key
 	* Locks can be picked- use two-factor authentication for better security
 * Encryption
-	* [protected form] = [salt] + protect([protection func], [salt] + [credential]);
+	* `[protected form] = [salt] + protect([protection func], [salt] + [credential]);`
 	* [The Crypto Module](https://nodejs.org/api/crypto.html)
 * Storage
 	* [Use this cheatsheet](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
-	* NEVER EVER store plaintext passwords, log passwords with console.log, or transmit unencrypted passwords (ie, from server to database - encrypt before you send!)
+	* _NEVER EVER_ store plaintext passwords, log passwords with console.log, or transmit unencrypted passwords (ie, from server to database - encrypt before you send!)
 * Logging
 	* Anytime credentials are changed needs to be logged
 	* Failed credentials should be logged
-	* [Follow this cheatsheet](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+	* [Follow this cheatsheet to see what you should log](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
