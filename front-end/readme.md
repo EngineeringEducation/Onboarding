@@ -35,8 +35,8 @@ Eloquent Javascript is going to be our first-line resource. These tutorials, rea
 **4** [Data Structures (Arrays, Dictionaries)](http://eloquentjavascript.net/04_data.html)  
 
 #### More advanced JS
-**5** [Higher Order Functions](http://eloquentjavascript.net/05_higher_order.html)
-**6** [Objects (not the dictionary kind)](http://eloquentjavascript.net/06_object.html)
+**5** [Higher Order Functions](http://eloquentjavascript.net/05_higher_order.html)  
+**6** [Objects (not the dictionary kind)](http://eloquentjavascript.net/06_object.html)  
 
 You should be able to complete this project if you understand the above resources:  
 **7** [Electronic Life](http://eloquentjavascript.net/07_elife.html)  
