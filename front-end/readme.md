@@ -53,7 +53,7 @@ Read [this](http://eloquentjavascript.net/12_browser.html) to find out why brows
 8- [The Document Object (Model)](http://eloquentjavascript.net/13_dom.html)  
 9- [Events](http://eloquentjavascript.net/14_event.html)  
 
-10- [DOM Exercises](/dom_exercise.md)
+10- [DOM Exercises](dom_exercise.md)
 11- [Forms and Form Fields](http://eloquentjavascript.net/18_forms.html)
 
 ### jQuery
@@ -62,7 +62,7 @@ The jQuery docs are [here](http://api.jquery.com/). Take a look at them, and the
 [Thinkful's Intro to jQuery](http://www.thinkful.com/learn/intro-to-jquery)
 
 Go back to the DOM exercises, adapt them to use jQuery.  
-12- [DOM Exercises](/dom_exercise.md)  
+12- [DOM Exercises](dom_exercise.md)  
 
 
 
