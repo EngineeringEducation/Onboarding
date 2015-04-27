@@ -18,8 +18,8 @@ There are two scenerios here that require you to find and use resources on your 
 Writing a layout first is the most common way to start an app. We're going to use Bootstrap to quickly lay out and modify two webapps in order to create something usable in a short amount of time. Throwing together an app front-end, even one without buttons that work, is a great way to figure out what kind of data you're going to have to gather and logistics you'll have to organize. 
 
 These are also scenerios that will require you to own the project and define your own success.
-* [Bootstrap-based app skeletons from screenshots](too_much_not_enough.md)
-* [Bootstrap-based app skeletons from wireframes](block_bazaar.md)
+* [Bootstrap-based app skeletons from hand-drawn wireframes](too_much_not_enough.md)
+* [Bootstrap-based app skeletons from a description (unfinished)](block_bazaar.md)
 
 
 
