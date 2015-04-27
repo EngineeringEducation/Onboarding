@@ -8,6 +8,7 @@
 
 Congratulations! You've landed a job at a brand-new startup with some people you think are really great. There's a very talented iOS engineer at the head of the company, and her co-founder is a bang-up product guy. They've been hard at work producing a product, and it's time to see if anyone would be interested in the next iteration.
 
+She emailed you this today- time to get started!
 
 [Our old landing-page is located here](http://www.ykombinator.com/), and now that we've pivoted to mobile we need to build an entirely new site. Use the same marketing copy- the app is the same, just on mobile now! We just need something that shows off that an app exists and points you at where you can download it.  
 
