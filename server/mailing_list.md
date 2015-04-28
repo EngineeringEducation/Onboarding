@@ -230,7 +230,7 @@ This will help us parse all of that messy data that comes in as a post body as s
 
 ## Step 3a: Log it out for great debugging
 
-Put this code as the first call to `app.use()`, above the static middleware routing and above the request body parsing. This way, it will run before anything else, but will allow other requests to be parsed.
+Put this code as the first call to `app.use()`, **above the static middleware routing** and above the request body parsing. This way, it will run before anything else, but will allow other requests to be parsed.
 ```javascript
 //logging middleware
 
