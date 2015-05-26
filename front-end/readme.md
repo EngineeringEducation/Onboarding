@@ -70,3 +70,6 @@ Go back to the DOM exercises, adapt them to use jQuery.
 [HTTP](http://eloquentjavascript.net/17_http.html)  
 AJAX in jQuery - [GET](http://api.jquery.com/jQuery.get/), [POST](http://api.jquery.com/jQuery.post/)  
 
+### Backbone
+(Not finished, stay tuned for updates!)  
+**13** [Backbone App](backbone.md)  

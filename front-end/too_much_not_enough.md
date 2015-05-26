@@ -2,7 +2,7 @@
 
 ## Scenerio 1: The Pitch Meeting
 
-We have 24 hours before our big pitch meeting with 5,000,000 Startups. They're really excited about our idea, but they want to see a few examples of the front-end. They're not too focused on user experience, it's more that I think they don't understand the problem we're trying to solve. So let's throw together some HTML so they know we have a crack team of developers who can iterate quickly. Oh also I already promised we'd have it so it's too late to back out now.
+We have 24 hours before our big pitch meeting with 5,000,000 Startups. They're really excited about our idea, but they want to see a few examples of the front-end. They're not too focused on user experience, it's more that I think they don't understand the problem we're trying to solve. So let's throw together some HTML so they know we have a crack team of developers who can iterate quickly. Oh also I already promised we'd have it so it's too late to back out now.  
 
 To recap, our idea is to disrupt the sharing economy for hyper-local food production.  
 
