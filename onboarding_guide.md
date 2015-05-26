@@ -65,3 +65,7 @@ Start going through the materials provided in this repository. Typically we star
 ## People who have completed this guide:
 [Liz (Track lead)](http://github.com/lizthedeveloper)  
 [Janardan (Track lead)](http://github.com/rolken)  
+
+[David (Loves cat gifs)](http://github.com/dladowitz)
+
+![Alt text](http://1-ps.googleusercontent.com/hk/pEsVsjur9-mHhASR14jwUkOv66/www.catgifpage.com/gifs/267.gif.pagespeed.ce.pyTSoDgHCYAZN8v1pVku.gif)
