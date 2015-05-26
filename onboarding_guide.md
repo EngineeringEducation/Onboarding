@@ -36,7 +36,7 @@ npm install grunt -g
 
 Install [postgres.app](http://postgresapp.com/)  
 
-Add psql to your path by opening ~/.bashrc from Terminal.app and adding this line (anywhere):
+Add psql to your path by opening ~/.bash_profile from Terminal.app and adding this line (anywhere):
 ```shell
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 ```
