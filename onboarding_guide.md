@@ -11,32 +11,32 @@ Sign up (if you don’t already have an account) for:
 [Install Heroku Toolbelt](https://toolbelt.heroku.com/)
 
 Install Brew  
-http://brew.sh/ OR  
+http://brew.sh/ OR (in Terminal.app)  
 ```shell
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-[Update Git](http://git-scm.com/download/mac) (for security reasons)  
+[Update Git past 2.0.0](http://git-scm.com/download/mac) (for security reasons)  
 
 
-Install Node  
+Install Node(in Terminal.app)   
 ```shell
 brew install node
 ```
 
-Install Bower  
+Install Bower(in Terminal.app)  
 ```shell
 npm install bower -g
 ```
 
-Install Grunt  
+Install Grunt(in Terminal.app)  
 ```shell
 npm install grunt -g
 ```
 
 Install [postgres.app](http://postgresapp.com/)  
 
-Add psql to your path by opening ~/.bashrc and adding this line (anywhere):
+Add psql to your path by opening ~/.bash_profile from Terminal.app and adding this line (anywhere):
 ```shell
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 ```
@@ -70,4 +70,8 @@ Start going through the materials provided in this repository. Typically we star
 
 ![Alt text](http://1-ps.googleusercontent.com/hk/pEsVsjur9-mHhASR14jwUkOv66/www.catgifpage.com/gifs/267.gif.pagespeed.ce.pyTSoDgHCYAZN8v1pVku.gif)
 [Mateo](http://github.com/mattphoto)  
+
+[Caitlin] (https://github.com/caitlin-mohnike)
+
+[Cynthia] (https://github.com/cstoneburner)
 
