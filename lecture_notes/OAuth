@@ -1,0 +1,15 @@
+Points:
+	* http://oauthbible.com/
+	* You, as a developer, get an application ID. This is similar to an API key, but it's intended to be associated with your application, and it's also intended that users are able to view all applications that they've granted access to.
+	* With your app ID, you make a GET request to Facebook with some information
+		* look at oauth bible to see what parameters you need
+		* talk about what "scopes" mean
+	* Facebook returns an access token, which is similar to a "visitor pass". It identifies both the user you're accessing, and the application you're in. 
+	* Now you can make calls to the API with the access token and your application ID.
+	* Often the next step is to create a user with the information you've recieved.
+
+Meta-Points:
+	* oAuth isn't a technology, just a standard
+	* there are multiple versions. Three-Legged oAuth is the most common for most APIs now. 
+	* These kinds of APIs change _all the time_
+	* Some people have implemented "oAuth" APIs, but they don't follow the standard very well, and aren't documented well. 
