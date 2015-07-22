@@ -39,8 +39,52 @@ Take a moment and do these things:
 
 Once you've written down your models and their attributes, head back over to the [Models](http://backbonetutorials.com/what-is-a-model/) example, and put some in a script tag embedded on the "search" page.
 
+An example:  
+```
+var Fruit = Backbone.Model.extend({
+	idAttribute: "_id",
+	defaults: {
+		name: "Unnamed Fruit",
+		img: "http://placehold.it/350x150"
+	}
+});
+
+var Fruits = Backbone.Collection.extend({
+	url: "/fruit",
+	model: Fruit
+});
+```
+** This assumes we have a URL that we're sending fruit to and getting it from. Unless you have a server setup for this, don't add a URL. **
+
 We'll factor out (organize) this code later by putting each model in it's own file, but when we're working on them it helps to put them where you can see them all at once.
 
 Now that you have models on your page, let's create views for them. You'll want to use templates, [this giant megatutorial](http://codebeerstartups.com/2012/12/how-to-use-templates-in-backbone-js-learning-backbone-js/) has a good section on them. 
 
-Take the repeated HTML code from your page that you used to intuit the models and put it in a `&lt;script&gt;` tag.
+
+Take the repeated HTML code from your page that you used to intuit the models and put it in `<script type="text/template" class="template hide">` tags for each small block that is repeated. Use the templating language of your choice to embed variables.  
+An example would be:   
+```
+<script type="text/template" class="template hide" id="fruit_template">
+	<div class="col-md-3">
+		<div class="image"><img src="{img.src}}"></div></div>
+		<div class="title">{{title}}</div>
+	</div>
+</script>
+```
+
+** This is an example, using an imaginary templating language. Don't just copy-paste this and expect it to work, do some research on what template language you want to use first. **
+
+Now, in your view, you'll want to put rendering code. An example:  
+```
+var FruitView = Backbone.View.extend({
+	tagname: 'div',
+	attributes : {
+		"class" : "col-md-3"
+	},
+	template: _.template($("#fruit_template").text()),
+	render: function() {
+		this.$el.html(this.template(this.model.attributes));
+    	return this;
+	}
+});
+```
