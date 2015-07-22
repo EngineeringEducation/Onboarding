@@ -73,8 +73,6 @@ var apple = new Fruit({
 	name: "Apple",
 	img: "http://cdn-www.i-am-bored.com/media/thumbnails/apple_for-diabetics[1].jpg"
 });
-
-var fruits = new Fruits([apple, pear, watermelon])
 ```
 Be sure to understand each line of the above example and then translate it to your own code, instead of just copy-pasting. Ensure that you can create models, add them to collections, and view their properties by logging `apple.attributes` to the console.
 
@@ -113,3 +111,38 @@ var FruitView = Backbone.View.extend({
 	}
 });
 ```
+#### Test your Views
+Backbone.js is primarily a framework that allows you to address seperation of concerns, and segment your code into reusable chunks. It doesn't have a lot of side effects, and it doesn't do things implicitly. After we've written view rendering code, we might expect our views to somehow just appear on the page, but we have to explicitly use them and tell them where to go.  
+
+Create an instance of a view, and give it a model that you've created.
+```javascript
+var fruitView = new FruitView({
+  model: apple
+});
+```
+
+Now we have a view, but it hasn't run it's render function, so it's really just the idea of a view. Rendering it will create DOM nodes, and fill the places in the template where there are variables in with the attributes from the model, but that still won't put it on the page. We have to explicitly put it on the page somewhere if we want to see it.
+
+```javascript
+fruitView.render(); //make the DOM nodes
+$('.container').append(fruitView.$el); //Append the element we create in the .render function to the actual page
+```
+
+Once that works, great! But, we don't want to have to do that for every single fruit on the page, nor do we want to have to loop through a lot of fruits and individually render them. There is a lot of functionality associated with groups of models and modelviews, such as adding one, sorting them, hiding one, filtering them, et cetera. We want a uniform way to interact with groups of models, and for that we use Collections. [Read up on them here](http://backbonetutorials.com/what-is-a-collection/). 
+
+They're very similar to Models, and CollectionViews are similar to ModelViews. Use the principles above to create Collections, and then CollectionViews. CollectionViews and ModelViews are the same exact thing, a `Backbone.View()`, but the difference is that instead of having a `model` property, it has a `collection` property. Collections and Models have different constructors, and Collections take an array of Models (or just object literals).
+```javascript
+var fruits = new Fruits([apple, pear, watermelon]);
+var fruitsView = new FruitsView({collection: fruits});
+```
+
+To review, the steps are:  
+* Create a [Collection](http://backbonejs.org/#Collection)
+* Create a CollectionView
+* In the .render() function, create individual ModelViews from the Models in your collection, and append them to the .$el property of your CollectionView
+* Create an instance of the Collection
+* Fill it with [Models](http://backbonejs.org/#Model)
+* Call the .render() function
+* Append the result to the page.
+
+That should result in the same HTML you had on your page from before, only this time it's created dynamically.
