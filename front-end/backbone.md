@@ -36,6 +36,9 @@ Take a moment and do these things:
 * Look for repeated code and write down models you think would come out of that code
 * Take note of sub-models that are "implied" by some of the controls and data on the page.
 * Write down the names and obvious attributes of each data model
+* Write down the actions users can take on each page- can they create? update? delete? Do they cause interactions between models? Are they finding / sorting / filtering models? Don't forget that User is also a model.
+
+It's important to recognize what kinds of interactions fall under what category. Liking a post on facebook could mean you're creating a like, or it could mean that you're updating a post. Either way though, it is an interaction between a User model, and a Post model, and potentially a Like model. It's up to you to decide how to store those interactions.
 
 Once you've written down your models and their attributes, head back over to the [Models](http://backbonetutorials.com/what-is-a-model/) example, and put some in a script tag embedded on the "search" page.
 
