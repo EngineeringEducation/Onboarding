@@ -21,7 +21,7 @@
 Now, read through these (just reading at first):  
 * [Models](http://backbonetutorials.com/what-is-a-model/)
 * [Views](http://backbonetutorials.com/what-is-a-view/)
-* [Collections](http://backbonetutorials.com/what-is-a-)collection/
+* [Collections](http://backbonetutorials.com/what-is-a-collection/)
 * [Routers](http://backbonetutorials.com/what-is-a-router/)
 
 These basic parts of backbone.js are what we'll be using to assemble an app.  
@@ -37,8 +37,10 @@ Take a moment and do these things:
 * Take note of sub-models that are "implied" by some of the controls and data on the page.
 * Write down the names and obvious attributes of each data model
 
-Once you've written down your models and their attributes, head back over to the [Models](http://backbonetutorials.com/what-is-a-model/) example, and put some in a script tag embedded on the "search" page. 
+Once you've written down your models and their attributes, head back over to the [Models](http://backbonetutorials.com/what-is-a-model/) example, and put some in a script tag embedded on the "search" page.
 
-We'll factor out (organize) this code later by putting each model in it's own file, but when we're working on them it helps to put them where you can see them all at once. 
+We'll factor out (organize) this code later by putting each model in it's own file, but when we're working on them it helps to put them where you can see them all at once.
 
 Now that you have models on your page, let's create views for them. You'll want to use templates, [this giant megatutorial](http://codebeerstartups.com/2012/12/how-to-use-templates-in-backbone-js-learning-backbone-js/) has a good section on them. 
+
+Take the repeated HTML code from your page that you used to intuit the models and put it in a `&lt;script&gt;` tag.
