@@ -146,3 +146,27 @@ To review, the steps are:
 * Append the result to the page.
 
 That should result in the same HTML you had on your page from before, only this time it's created dynamically.
+
+#### Adding Events
+Once we have dynamic views, we have a uniform way of creating and rendering them on the page. We're also given a uniform way to attach events to the items on the page. The ["events" attribute on a view](http://backbonejs.org/#Events) allows us to use a CSS selector to attach events to items within our view.
+Recall our models, such as our Fruit model, and add an "events" object:
+```javascript
+var FruitView = Backbone.View.extend({
+	tagname: 'div',
+	attributes : {
+		"class" : "col-md-3"
+	},
+	events: {
+		'click .title' : function(e) {
+			console.log("you clicked on " + this.model.name);
+		}
+	},
+	template: _.template($("#fruit_template").text()),
+	render: function() {
+		this.$el.html(this.template(this.model.attributes));
+    	return this;
+	}
+});
+```
+
+Next, go back to your planning notes. You should have a list of possible interactions- some of which will be on click, or on change of a value. Try adding events to the objects that have User Model - Object Model interactions. 
