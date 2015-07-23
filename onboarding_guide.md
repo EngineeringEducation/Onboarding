@@ -75,4 +75,6 @@ Start going through the materials provided in this repository. Typically we star
 
 [Cynthia] (https://github.com/cstoneburner)
 
+[Vanessa] (https://github.com/creatigeek)
+
 [Matt] (https://github.com/Gwater17)
