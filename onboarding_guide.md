@@ -55,7 +55,7 @@ Find the repository link to the right hand side of the page. Use the SSH link in
 
 Next, locally (on your computer), create a branch with your name. ([Stuck?](https://try.github.io/levels/1/challenges/1))  
 
-Edit this page (at the bottom) to include your name and a link to your github profile, then push your branch to this repository.  
+Edit this page locally (at the bottom) to include your name and a link to your github profile, then push your branch to this repository.  
 [Then file a pull request](https://help.github.com/articles/creating-a-pull-request/).  
 
 ## Next Steps
