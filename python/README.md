@@ -33,7 +33,7 @@ If you don't have any experience with Python at all, the first place to start is
 
 ## Advanced Exercises
 [Python Review](/experienced_python_users_review) - For people with some python experience already
-[Markov Chains](/markov_chains)
+[Markov Chains](/markov_chains) - test your basic algorithmic thinking
 
 
 
