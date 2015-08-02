@@ -11,6 +11,9 @@ https://try.github.io/levels/1/challenges/1
 Hacker News - 30 minuites or so a day, don't get sucked in!
 http://news.ycombinator.com
 
+How Complex Systems Fail  
+http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf
+
 
 
 ## Web
