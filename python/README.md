@@ -23,17 +23,17 @@ If you don't have any experience with Python at all, the first place to start is
 ## Beginner Exercises
 
 ### Syntax
-[Guessing Game](/guessing_game)
-[Calculator - Part One](/calculator)
-[Calculator - Part Two](/calculator_2)
-[List Operations](/list_operations)
-[Data Structures](/data_structures)
-[State and Traversal](/counts_and_traversal)
-[Extra Data Structures](/data_structures_2)
+* [Guessing Game](/guessing_game)
+* [Calculator - Part One](/calculator)
+* [Calculator - Part Two](/calculator_2)
+* [List Operations](/list_operations)
+* [Data Structures](/data_structures)
+* [State and Traversal](/counts_and_traversal)
+* [Extra Data Structures](/data_structures_2)
 
 ## Advanced Exercises
-[Python Review](/experienced_python_users_review) - For people with some python experience already
-[Markov Chains](/markov_chains) - test your basic algorithmic thinking
+* [Python Review](/experienced_python_users_review) - For people with some python experience already
+* [Markov Chains](/markov_chains) - test your basic algorithmic thinking
 
 
 
