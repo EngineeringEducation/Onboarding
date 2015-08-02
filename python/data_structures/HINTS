@@ -1,0 +1,27 @@
+###SPOILERS LEVEL 1
+Identify what you don't know. You have not been asked to open a file and consume its contents yet. You also haven't been asked to use dictionaries yet. You will also need to figure out how to iterate through a dictionary. An important function for iterating through dictionaries is .items()
+
+###SPOILERS LEVEL 2
+Start with the smallest thing possible, copy a line out of the scores.txt file and see if you can parse it using split(), then use the resulting tokens to build a dictionary with one item in it.
+
+###SPOILERS LEVEL 3
+Using the 'main loop' methodology, make your program repeat the process until it consumes all the lines in the file.
+
+###SPOILERS LEVEL 4
+You can't sort a dictionary directly. You can, however, get the list of keys out of a dictionary and sort those. This lets you pull out values one at a time in alphabetical order.
+
+###SPOILERS LEVEL 4
+Pseudocode:
+    # setup
+    create an empty scores dictionary
+    open the file 'sorted.txt'
+    # main loop
+    for each line in the file:
+        split the line by the separator ":"
+        using the first token as a key, insert the second token into the dictionary as a value
+
+    create a list of keys
+    sort the keys
+    for each key in the sorted keys:
+        print the restaurant name and score
+
